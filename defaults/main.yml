@@ -1,0 +1,7 @@
+---
+# defaults file for ansible-python34
+python34_redhat_pkg:
+  - python34
+  - python34-devel
+  - python-virtualenv
+  - python-pip

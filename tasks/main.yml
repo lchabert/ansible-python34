@@ -1,0 +1,4 @@
+---
+# tasks file for ansible-python34
+- include: centos.yml
+  when: ansible_os_family == "RedHat"

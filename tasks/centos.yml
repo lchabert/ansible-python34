@@ -1,0 +1,13 @@
+---
+- name: Install EPEL Release repo
+  yum: name=epel-release state=present
+  tags: [packages,python34,python]
+
+- name: Install Python packages
+  yum: name={{ item }} state=present
+  with_items: "{{ python34_redhat_pkg }}"
+  tags: [packages,python34,python]
+
+- name: Upgrade virtual-env by pip
+  pip: name=virtualenv version=15.0.1
+  tags: [packages,python34,python]
